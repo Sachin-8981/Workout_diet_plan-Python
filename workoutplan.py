@@ -1,7 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
 
-genai.configure(api_key = "AIzaSyAIdmGfIBdFtx_Z6sNaKvP50BM819V5wH8")
+import os
+
+api_key = os.getenv("API_KEY")
+
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.title("AI Diet & Workout Recommendation")
